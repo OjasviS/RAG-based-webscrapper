@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAG Web Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 Website RAG Assistant</h1>
+
+    <!-- Crawl section -->
+    <div class="section">
+      <h2>Step 1: Crawl a Website</h2>
+      <input type="text" id="url-input" placeholder="Enter website URL (e.g. https://fastapi.tiangolo.com)" />
+      <button id="crawl-btn">Crawl Website</button>
+      <p id="crawl-status"></p>
+    </div>
+
+    <hr />
+
+    <!-- Ask section -->
+    <div class="section">
+      <h2>Step 2: Ask a Question</h2>
+      <textarea id="question-input" placeholder="Type your question here..."></textarea>
+      <button id="ask-btn">Ask</button>
+
+      <div id="answer-box">
+        <h3>Answer:</h3>
+        <p id="answer-text"></p>
+
+        <h3>Sources:</h3>
+        <ul id="sources"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
