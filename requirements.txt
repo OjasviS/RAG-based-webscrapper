@@ -1,0 +1,27 @@
+# Web framework
+Flask==3.0.3
+
+# Async HTTP requests
+aiohttp==3.10.5
+
+# HTML parsing and readability
+beautifulsoup4==4.12.3
+readability-lxml==0.8.1
+
+# LangChain and embeddings
+langchain==0.3.5
+langchain-community==0.3.5
+tldextract==5.1.2
+faiss-cpu==1.8.0.post1
+sentence-transformers==3.0.1
+
+# OpenAI client
+openai==1.50.2
+
+# Utilities
+urllib3==2.2.2
+requests==2.32.3
+tqdm==4.66.5
+
+# Optional (for testing or running locally)
+python-dotenv==1.0.1
