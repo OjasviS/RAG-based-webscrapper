@@ -170,27 +170,18 @@ curl -X POST http://127.0.0.1:5000/ask \
 
 ---
 
-## Repository Structure
-RAG_web_scrapper/
-│
-├── app/
-│   ├── crawler.py
-│   ├── indexing.py
-│   ├── rag_flask_api.py
-│   ├── static/
-│   │   ├── script.js
-│   │   └── style.css
-│   └── templates/
-│       └── index.html
-│
-├── data/
-│   ├── crawled_data.json
-│   └── faiss_index/
-│
-├── .env.example
-├── .gitignore
-├── requirements.txt
-└── README.md
+## Trade offs
+
+	•	Crawling limited to ~30–50 pages to prevent overloading hosts.
+	•	Uses CPU-based FAISS for portability; GPU could improve speed.
+	•	Embedding quality depends on model choice (trade-off between accuracy and runtime).
+	•	Minimal error handling for simplicity under a time constraint.
+	•	OpenAI’s GPT model used for grounded generation; open models can replace it.
+	•	Readability parser may skip dynamic JavaScript content.
+	•	Simple file-based storage avoids DB complexity but limits scalability.
+	•	Chose Flask over FastAPI for simplicity and lower learning overhead.
+	•	RAG pipeline designed for reproducibility over performance.
+	•	Balanced design — small, interpretable, and easy to extend.
 
 
 
