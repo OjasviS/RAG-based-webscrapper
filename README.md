@@ -68,7 +68,8 @@ curl -X POST http://127.0.0.1:5000/crawl \
 }
 ```
 
-2. **/index**  
+2. **/index**
+     
 **Request**
 ```bash
 curl -X POST http://127.0.0.1:5000/index \
@@ -88,7 +89,9 @@ curl -X POST http://127.0.0.1:5000/index \
 ```
 
 3. **/ask**
+   
 **Answer found in context**
+
 **Request**
 ```bash
 curl -X POST http://127.0.0.1:5000/ask \
@@ -118,6 +121,7 @@ curl -X POST http://127.0.0.1:5000/ask \
 ```
 
 **Answer not found in context**
+
 **Request**
 ```bash
 curl -X POST http://127.0.0.1:5000/ask \
